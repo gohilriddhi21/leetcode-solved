@@ -14,9 +14,10 @@ class Solution(object):
         while x>0:
             new_no = new_no * 10 + x % 10
             x //= 10 # so that it doesn't run infinitely or rather new_no is never inf
-            
         return original_number == new_no
 
+    
+    # Best solution
     def is_Palindrome_by_half(self, x):
         """
         Divides half the number, reverses the second half then compares the two halves.
