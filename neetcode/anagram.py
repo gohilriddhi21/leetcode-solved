@@ -15,7 +15,7 @@ class Solution:
                 return False
         return True
     
-    # Time complexity: O(n+m)
+    # Time complexity: O(n)
     def trying(self, s: str, t:str) -> bool:
         if len(s) != len(t):
             return False
