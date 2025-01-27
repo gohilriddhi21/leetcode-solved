@@ -10,7 +10,6 @@ class Solution:
             else:
                 return [l+1, r+1]
         return []
-                
 
 
 if __name__ == "__main__":

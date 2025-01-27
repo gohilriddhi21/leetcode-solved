@@ -16,20 +16,6 @@ class Solution(object):
             l1 = l1.next if l1 else headB
             l2 = l2.next if l2 else headA
         return l1.val
-    
-        # 2
-        seen = set()
-        while headA:
-            seen.add(headA)
-            headA = headA.next
-        
-        while headB:
-            if headB in seen:
-                return headB.val
-            headB = headB.next
-        return None
-            
-
 
 def print_list(head):
     elements = []

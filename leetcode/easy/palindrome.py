@@ -26,16 +26,14 @@ class Solution(object):
         """
         if (x < 0):
             return False
-        
+
         y = 0
         while x > y:
             y = (y * 10) + (x % 10)
             x //= 10
-        
-        return x == y or x == y // 10
-        
-        
-        
+
+        return x in [y, y // 10]
+
 if __name__ == "__main__":
     s = Solution()
     print(s.is_Palindrome_by_mod(0))

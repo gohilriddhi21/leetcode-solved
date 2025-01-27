@@ -1,9 +1,6 @@
 class Solution:
     def encode(self, strs: list[str]) -> str:
-        encoded = ""
-        for s in strs:
-            encoded += str(len(s)) + "#" + s
-        return encoded
+        return "".join(f"{len(s)}#{s}" for s in strs)
 
     def decode(self, s: str) -> list[str]:
         res = []
