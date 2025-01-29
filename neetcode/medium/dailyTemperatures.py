@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 class Solution:
     def dailyTemperatures(self, temperatures: list[int]) -> list[int]:
         n = len(temperatures)
@@ -13,5 +15,18 @@ class Solution:
             res.append(count)
         return res
 
+    def mono_decreasing_stack(self, temperatures: list[int]) -> list[int]:
+        n = len(temperatures)
+        res = [0] * len(temperatures)
+        
+        stack=[]
+        for i in range(n):
+            while stack and stack[-1][1] < temperatures[i]:
+                idx, val = stack.pop()
+                res[idx] = i - idx
+            stack.append((i,temperatures[i]))
+        return res
+        
+    
 if __name__ == "__main__":
-    print(Solution().dailyTemperatures([30,38,30,36,35,40,28])) # [1,4,1,2,1,0,0]
+    print(Solution().mono_decreasing_stack([30,38,30,36,35,40,28])) # [1,4,1,2,1,0,0]
