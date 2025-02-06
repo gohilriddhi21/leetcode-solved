@@ -75,3 +75,8 @@ if __name__ == "__main__":
     print(obj.isFull()) # True
     print(obj.enQueue(10)) # True [3, 6, 7, 8]    
     print(obj.getQueue())
+    
+    print(obj.deQueue()) # True [8, None, 3, 6, 7]
+    print(obj.getQueue())
+    print(obj.Front()) # 3
+    print(obj.Rear()) # 8
