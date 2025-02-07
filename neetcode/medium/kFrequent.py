@@ -39,10 +39,13 @@ class Solution:
         count = {}
         for num in nums:
             count[num] = 1 + count.get(num, 0)
-
+        print(count)
+        
         heap = []
         for num in count:
+            print("num: ", num)
             heapq.heappush(heap, (count[num], num))
+            print(heap)
             if len(heap) > k:
                 heapq.heappop(heap)
 
@@ -51,6 +54,7 @@ class Solution:
         return res
 
 if __name__ == "__main__":
-    print(Solution().topKFrequent_naive([1,2,2,3, 3, 3, 4, 4, 4, 5, 5, 5], 2))  # [1, 2]
-    print(Solution().topKFrequent_2([1,2,2,3, 3, 3, 4, 4, 4, 5, 5, 5], 2))  # [1, 2]
-    print(Solution().topKFrequent_heap([1,2,2,3, 3, 3, 4, 4, 4, 5, 5, 5], 2))  # [1, 2]
+    print(Solution().topKFrequent_heap([1,1,1,2,2,3,4,4,5, 5, 4], 2))  # [1, 4]
+    # print(Solution().topKFrequent_naive([1,2,2,3, 3, 3, 4, 4, 4, 5, 5, 5], 2))  # [1, 2]
+    # print(Solution().topKFrequent_2([1,2,2,3, 3, 3, 4, 4, 4, 5, 5, 5], 2))  # [1, 2]
+    # print(Solution().topKFrequent_heap([1,2,2,3, 3, 3, 4, 4, 4, 5, 5, 5], 2))  # [1, 2]
