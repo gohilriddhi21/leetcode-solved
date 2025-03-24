@@ -28,17 +28,15 @@ def print_list(head):
 if __name__ == "__main__":
     s = Solution()
     
-    # # 4 -> 1 -> 8 -> 4 -> 5
-    # ll1 = ListNode(4, ListNode(1, ListNode(8, ListNode(4, ListNode(5)))))
-    # print_list(ll1)
+    # 4 -> 1 -> 8 -> 4 -> 5
+    ll1 = ListNode(4, ListNode(1, ListNode(8, ListNode(4, ListNode(5)))))
+    print_list(ll1)
     
-    # # 5 -> 6 -> 1 -> 8 -> 4 -> 5
-    # ll2 = ListNode(5, ListNode(6, ListNode(1, ll1.next.next))) 
-    # print_list(ll2)
+    # 5 -> 6 -> 1 -> 8 -> 4 -> 5
+    ll2 = ListNode(5, ListNode(6, ListNode(1, ll1.next.next))) 
+    print_list(ll2)
     
-    # print(s.getIntersectionNode(ll1, ll2))
-    
-    
+    print(s.getIntersectionNode(ll1, ll2))
     
     # 4 -> 1 -> 8 -> 5
     ll1 = ListNode(4, ListNode(1, ListNode(8, ListNode(5))))

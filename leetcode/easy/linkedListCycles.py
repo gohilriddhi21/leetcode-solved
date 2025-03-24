@@ -27,7 +27,6 @@ def print_list(head):
 
 if __name__ == "__main__":
     s = Solution()
-    
     # 1 -> 3 -> 5 -> 1 
     ll = ListNode(1, ListNode(3, ListNode(5)))
     ll.next.next.next = ll
