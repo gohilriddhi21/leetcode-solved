@@ -14,15 +14,11 @@ def recurPermute(index, s, ans):
 
 # Function to find all unique permutations
 def findPermutation(s):
-
     # Stores the final answer
     ans = []
-
     recurPermute(0, list(s), ans)
-
     # sort the resultant list
     ans.sort()
-
     return ans
 
 if __name__ == "__main__":
