@@ -15,17 +15,13 @@ class Bucket:
                 del self.bucket[i]
 
     def get(self, key):
-        for (k, v) in self.bucket:
-            if k == key:
-                return v
-        return -1
+        return next((v for k, v in self.bucket if k == key), -1)
 
 class MyHashMap(object):
 
     def __init__(self):
         self.hash_key_space = 2069
-        self.hash_table = [Bucket() for i in range(self.hash_key_space)]
-        
+        self.hash_table = [Bucket() for _ in range(self.hash_key_space)]
 
     def put(self, key, value):
         """
