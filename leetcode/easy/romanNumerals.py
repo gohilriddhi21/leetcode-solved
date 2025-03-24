@@ -22,8 +22,7 @@ class Solution(object):
             else:
                 total = total + roman_numerals[s[i]]
             print(total)
-        total = total + roman_numerals[s[-1]]
-        return total
+        return total + roman_numerals[s[-1]]
 
 if __name__ == "__main__":
     s = Solution()
