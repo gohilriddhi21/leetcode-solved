@@ -8,7 +8,7 @@ class Solution:
             rs = rs + nums[r]
             if ls == rs:
                 return l+1
-            l+=1
+            l += 1  
             r-=1
         return -1
 
