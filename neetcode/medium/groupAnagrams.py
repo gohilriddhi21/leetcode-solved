@@ -20,8 +20,7 @@ class Solution:
                 count[ord(c) - ord("a")] += 1
             res[tuple(count)].append(s)
         return res.values()
-    
-    
+
 
 if __name__ == "__main__":
     print(Solution().groupAnagrams_2(["eat", "tea", "tan", "ate", "nat", "bat"]))  # [["bat"],["nat","tan"],["ate","eat","tea"]]
