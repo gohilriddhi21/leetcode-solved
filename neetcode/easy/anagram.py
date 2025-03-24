@@ -1,9 +1,7 @@
 class Solution:
     # Time complexity: O(n log n + m log m)
     def sortingAnagram(self, s: str, t: str) -> bool:
-        if len(s) != len(t):
-            return False
-        return sorted(s) == sorted(t)
+        return False if len(s) != len(t) else sorted(s) == sorted(t)
     
     # Time complexity: O(n^2)
     def isAnagram(self, s: str, t: str) -> bool:
@@ -17,7 +15,8 @@ class Solution:
         if len(s) != len(t):
             return False
 
-        countS = countT = {}
+        countS = {}
+        countT = {}
         for i in range(len(countS)):
             countS[s[i]] = 1 + countS.get(s[i], 0)
             countT[t[i]] = 1 + countT.get(t[i], 0)
