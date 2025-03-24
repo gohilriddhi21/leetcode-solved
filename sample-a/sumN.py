@@ -7,7 +7,7 @@ def recursiveSum(i, sum):
 
 def main():
     n = 5
-    recursiveSum(5, 0)
+    recursiveSum(n, 0)
 
 
 if __name__ == '__main__':
