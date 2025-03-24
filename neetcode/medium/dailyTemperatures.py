@@ -22,7 +22,7 @@ class Solution:
         stack=[]
         for i in range(n):
             while stack and stack[-1][1] < temperatures[i]:
-                idx, val = stack.pop()
+                idx, _ = stack.pop()
                 res[idx] = i - idx
             stack.append((i,temperatures[i]))
         return res
