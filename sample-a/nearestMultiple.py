@@ -3,6 +3,6 @@ def round( n ):
     b = a + 10
     return (b if n - a >= b - n else a)
 
-# driver code
-n = 33
-print(round(n))
+if __name__ == "__main__":
+    n = 33
+    print(round(n))
