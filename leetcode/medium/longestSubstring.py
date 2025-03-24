@@ -23,5 +23,3 @@ if __name__ == "__main__":
     print(s.lengthOfLongestSubstring("abcabcbb"))
     print(s.lengthOfLongestSubstring("bbbbb"))
     print(s.lengthOfLongestSubstring("pwwkew"))
-    
-    
